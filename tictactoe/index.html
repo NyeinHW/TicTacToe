@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe Game</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='description' content='A simple game, written in simple javascript.'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='application-name' content='Tic Tac Toe Game'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black'>
+    <meta name='apple-mobile-web-app-title' content='Tic Tac Toe Game'>
+    <link rel='icon' sizes='192x192' href='/images/touch/logo_192.png'>
+    <link rel='apple-touch-icon' href='/images/touch/logo_192.png'>
+    <meta name='msapplication-TileImage' content='/images/touch/logo_144.png'>
+    <meta name='msapplication-TileColor' content='#2196F3'>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <section class="container mt-5">
+        <div class="col-md-6 offset-md-3">
+            <div class="text-center mb-4">
+                <img class="mb-4" src="images/logo.png" alt="" width="72" height="72">
+                <h1 class="h3 mb-3 font-weight-normal">Tic Tac Toe</h1>
+                <p>A simple game, written in simple javascript</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-5" id="registerView">
+        <div class="col-md-6 offset-md-3">
+            <div class="form-group col-lg-12">
+                <label for="Player1Name">First Player's Name</label>
+                <input type="text" name="" class="form-control" id="player1Name" value="">
+            </div>
+            <div class="form-group col-lg-12">
+                <label for="Player2Name">Second Player's Name</label>
+                <input type="text" name="" class="form-control" id="player2Name" value="">
+            </div>
+            <div class="form-group col-lg-12">
+                <button id="startGame" class="btn btn-lg btn-block btn-primary">Play</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="gameView" class="container mt-1" style="display: block;">        
+        <div id="gameViewHeader">
+
+        </div>
+        <div class="play-area">
+            <div class="board">
+                <div><input id="block1" value="1" type="checkbox" /><label for="block1"></label> </div>
+                <div><input id="block2" value="2" type="checkbox" /><label for="block2"></label> </div>
+                <div><input id="block3" value="3" type="checkbox" /><label for="block3"></label> </div>
+                <div><input id="block4" value="4" type="checkbox" /><label for="block4"></label> </div>
+                <div><input id="block5" value="5" type="checkbox" /><label for="block5"></label> </div>
+                <div><input id="block6" value="6" type="checkbox" /><label for="block6"></label> </div>
+                <div><input id="block7" value="7" type="checkbox" /><label for="block7"></label> </div>
+                <div><input id="block8" value="8" type="checkbox" /><label for="block8"></label> </div>
+                <div><input id="block9" value="9" type="checkbox" /><label for="block9"></label> </div>
+            </div>
+        </div>
+        <div class="action-footer">
+            <button id="restart-game" class="btn btn-primary">New Game</button> <button id="end-game" class="btn btn-warning">Exit</button> 
+        </div>
+    </section>
+
+    <section class="container mt-5" id='scoreboard'>
+            <div class="text-left mb-4">
+                <h1 class="h3 font-weight-normal">Top Players</h1>
+            </div>
+            <ul class="list-group list-group-flush">
+            </ul>
+        </section>
+
+    <template id="gameview-header-template">
+        <h2 class="text-center h4">
+            {{player1Name}} (<span class="green">{{player1Mark}}</span>) 
+            Vs 
+            {{player2Name}} (<span class="grey">{{player2Mark}}</span>) 
+        </h2>
+        <h5 class="card-title font-weight-normal p-1 mt-1 h6">{{currentPlayer}}'s turn</h5>
+        <div id="game-status">{{gameStatus}}</div>
+    </template>
+    <script src="js/app.js" type="module"></script>
+</body>
+
+</html>

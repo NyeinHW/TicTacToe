@@ -1,0 +1,114 @@
+#gameView {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+#gameView .play-area {
+  padding: 5px 0px;
+  width: 100%;
+  background-color: #27aae1;
+  border-color: #27aae1;
+}
+
+#gameView .action-footer {
+  padding: 20px 0px;
+}
+
+#gameView #restart-game {
+  background-color: #27aae1;
+  border-color: #27aae1;
+}
+
+#gameView .board {
+  width: 280px;
+  margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#gameView .board > div {
+  width: 33.3%;
+  border: 1px solid #fff;
+}
+
+#gameView .board > div:nth-child(1), #gameView .board > div:nth-child(3), #gameView .board > div:nth-child(7), #gameView .board > div:nth-child(9) {
+  border: 0px;
+}
+
+#gameView .board > div:nth-child(4), #gameView .board > div:nth-child(6) {
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#gameView .board > div:nth-child(2), #gameView .board > div:nth-child(8) {
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+#gameView .board > div input {
+  display: none;
+}
+
+#gameView .board > div label {
+  font-family: 'Indie Flower', cursive;
+  font-size: 3em;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#gameView .board > div label.grey {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+#gameView .board > div label.white {
+  color: #f2ebd3;
+}
+
+#gameView .board > div label.wining-position {
+  -webkit-animation: scaling-font-size .2s;
+          animation: scaling-font-size .2s;
+  color: green;
+}
+
+@-webkit-keyframes scaling-font-size {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaling-font-size {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=game.css.map */
